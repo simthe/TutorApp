@@ -1,0 +1,32 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="TutorStudentAppNomzaza.SignIn" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="container">
+        <h2 class="text-center">User Login</h2>
+        <asp:Label ID="lblMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
+
+        <div class="form-group">
+            <label for="txtEmail">Email:</label>
+            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" CssClass="form-control" required="required"></asp:TextBox>
+        </div>
+
+        <div class="form-group">
+            <label for="txtPassword">Password:</label>
+            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
+        </div>
+
+        <div class="text-center">
+            <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="btnLogin_Click" />
+        </div>
+
+        <div class="text-center">
+            <a href="~/ForgotPassword" runat="server">Forgot Password?</a><br />
+            <span>Don't have an account? <a href="~/UserRegistration" runat="server">Register</a></span>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional, for interactive components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</asp:Content>
