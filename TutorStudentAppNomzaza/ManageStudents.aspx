@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="ManageStudents.aspx.cs" Inherits="TutorStudentAppNomzaza.ManageStudents" %>
+<%@ Page Title="Students" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="ManageStudents.aspx.cs" Inherits="TutorStudentAppNomzaza.ManageStudents" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
 </asp:Content>
@@ -6,6 +6,7 @@
     <div class="container">
         <div class="form-group col-xs-12 grid-container">
             <div style="border-radius: 0px;" class="panel-heading">
+                <br />
                 <h3>Manage Students</h3>
             </div>
             <div class="row">
