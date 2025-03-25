@@ -1,10 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="SubjectAdmin.aspx.cs" Inherits="TutorStudentAppNomzaza.SubjectAdmin" %>
+<%@ Page Title="Subjects" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="SubjectAdmin.aspx.cs" Inherits="TutorStudentAppNomzaza.SubjectAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel runat="server" Visible="false" ID="pnlSubAdd">
     <div class="container">
-        <h2 class="text-center">Subject Details</h2>
+        <br />
+        <h2>Subject Details</h2>
+        <br />
         <asp:Label ID="lblMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
         <div class="form-group">
             <label for="txtSubName">Subject Name:</label>
@@ -18,7 +20,8 @@
                 <asp:Label ID="lblSuccess" runat="server" ForeColor="Green"></asp:Label>
                 <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
             </div>
-        <div class="text-center">
+        <br />
+        <div>
             <asp:Button ID="txtSave" runat="server" OnClick="txtSave_Click" Text="Save Subject" CssClass="btn btn-primary" />
         </div>
     </div>
@@ -29,12 +32,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </asp:Panel>
     <asp:Panel runat="server" Visible="true" ID="pnlSubDis">
-        <div class="text-center">
-            <asp:Button ID="NewSubject" runat="server" OnClick="NewSubject_Click" Text="New Subject" CssClass="btn btn-primary" />
-        </div>
+        
         <div class="container">
             <div class="form-group col-xs-12 grid-container">
                 <div style="border-radius: 0px;" class="panel-heading">
+                    <br />
                     <h3>Manage Subjects</h3>
                 </div>
                 <div class="row">
@@ -53,6 +55,9 @@
                     </div>
 
                 </div>
+                <div>
+    <asp:Button ID="NewSubject" runat="server" OnClick="NewSubject_Click" Text="New Subject" CssClass="btn btn-primary" />
+</div>
             </div>
         </div>
 
