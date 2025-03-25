@@ -1,7 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="TutorStudentAppNomzaza.SignIn" %>
+<%@ Page Title="Log In" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="TutorStudentAppNomzaza.SignIn" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
-        <h2 class="text-center">User Login</h2>
+        <h2>User Login</h2>
+        <hr />
+        <br />
         <asp:Label ID="lblMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
 
         <div class="form-group">
@@ -13,14 +15,15 @@
             <label for="txtPassword">Password:</label>
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
         </div>
-
-        <div class="text-center">
+        <br />
+        <br />
+        <div>
             <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="btnLogin_Click" />
         </div>
-
-        <div class="text-center">
+        <br />
+        <div>
             <a href="~/ForgotPassword" runat="server">Forgot Password?</a><br />
-            <span>Don't have an account? <a href="~/UserRegistration" runat="server">Register</a></span>
+            <span>Don't have an account? <a href="~/StudentRegistration" runat="server">Register</a></span>
         </div>
     </div>
 
