@@ -1,10 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="AdminRegister.aspx.cs" Inherits="TutorStudentAppNomzaza.AdminRegister" %>
+<%@ Page Title="Admins" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="AdminRegister.aspx.cs" Inherits="TutorStudentAppNomzaza.AdminRegister" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel runat="server" Visible="false" ID="pnlSubAdd">
     <div class="container">
-        <h2 class="text-center">Admin Registration</h2>
+        <br />
+        <h2>Admin Registration</h2>
+        <br />
         <asp:Label ID="lblMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
         <div class="form-group">
             <label for="txtFirstName">First Name:</label>
@@ -26,7 +28,8 @@
             <label for="txtPhone">Phone Number:</label>
             <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" required="required"></asp:TextBox>
         </div>
-        <div class="text-center">
+        <br />
+        <div>
             <asp:Button ID="btnRegister" OnClick="btnRegister_Click" runat="server" Text="Register" CssClass="btn btn-primary" />
         </div>
     </div>
@@ -37,9 +40,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         </asp:Panel>
     <asp:Panel runat="server" Visible="true" ID="pnlSubDis">
-        <div class="text-center">
-            <asp:Button ID="btnAddAdmin" runat="server" OnClick="btnAddAdmin_Click" Text="New Admin" CssClass="btn btn-primary" />
-        </div>
+        
         <div class="container">
             <div class="form-group col-xs-12 grid-container">
                 <div style="border-radius: 0px;" class="panel-heading">
@@ -63,6 +64,10 @@
 
                 </div>
             </div>
+            <br />
+            <div>
+    <asp:Button ID="btnAddAdmin" runat="server" OnClick="btnAddAdmin_Click" Text="New Admin" CssClass="btn btn-primary" />
+</div>
         </div>
 
         <script src="js/jquery-1.12.0.min.js"></script>
