@@ -1,67 +1,45 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="TutorStudentAppNomzaza.Student" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="TutorStudentAppNomzaza.Student" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title>Qurious Quest Tutors</title>
+    <title><%: Page.Title %> - Qurious Quest Tutors</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-        body {
-            padding-top: 70px;
-            overflow-x: hidden;/* Adjust this value based on your navbar height */
-        }
-        .sidebar {
-            position: fixed;
-            top: 70px; /* Adjust this to match the height of the top navbar */
-            bottom: 0;
-            left: 0;
-            z-index: 100;
-            height: calc(100% - 70px); /* Adjust height */
-            padding: 48px 0 0; /* Adjust padding */
-            background-color: black;
-            overflow-x: hidden; /* Prevent horizontal scroll */
-        }
-        .sidebar.hidden {
-            margin-left: -250px; /* Hide sidebar */
-        }
-        .sidebar a {
-            color: white;
-        }
-        .sidebar a:hover {
-            background-color: #495057; /* Darker on hover */
-        }
-        .main-content {
-            margin-left: 250px; /* Space for sidebar */
-            transition: margin-left 0.3s; /* Transition for main content */
-            padding: 20px; /* Main content padding */
-        }
-        .main-content.expanded {
-            margin-left: 0; /* Adjust margin when sidebar is hidden */
-        }
-        .toggle-btn {
-            position: absolute;
-            left: 260px; /* Button position */
-            top: 20px; /* Button top position */
-            z-index: 1000; /* Ensure button is above sidebar */
-        }
-    </style>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            
             <!-- Top Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+            <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" runat="server" href="~/StudentHome">Qurious Quest Tutors</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" aria-label="Toggle navigation" aria-controls="navbarColor02" data-target=".navbar-collapse" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Right-aligned links -->
+                <li><a class="nav-link" runat="server" href="StudentProfile.aspx">Profile</a></li>
+                <li><a class="nav-link" runat="server" href="Default.aspx">Sign Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            <%--<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <div class="container">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand" runat="server" href="~/HomeUser.aspx">Qurious Quest Tutors</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" aria-label="Toggle navigation" aria-controls="navbarColor01" data-target=".navbar-collapse" aria-expanded="false">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/HomeUser.aspx">Qurious Quest Tutors</a>
-                    <div class="collapse navbar-collapse" id="topNavbar">
+                    <div class="collapse navbar-collapse" id="navbarColor01">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Notifications <span class="badge badge-danger">3</span></a>
@@ -82,30 +60,9 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav>--%>
 
-            <!-- Side Navbar -->
-            <div class="sidebar">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" runat="server" href="StudentProfile.aspx">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" runat="server" href="Default.aspx">Logout</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="sidebar" id="sidebar">
-                <h3 class="text-center">Our Menu</h3>
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="StudentProfile.aspx">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Default.aspx">Logout</a>
-                    </li>
-                </ul>
-            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 
             <div class="container" style="margin-left: 250px;">
                 <!-- Adjust margin for sidebar width -->
@@ -116,15 +73,6 @@
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-            <script>
-                $(document).ready(function () {
-                    $('#toggle-btn').click(function () {
-                        $('#sidebar').toggleClass('hidden');
-                        $('#main-content').toggleClass('expanded');
-                    });
-                });
-            </script>
         </div>
     </form>
 </body>
