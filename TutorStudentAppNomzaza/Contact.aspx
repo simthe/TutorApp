@@ -1,10 +1,11 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="TutorStudentAppNomzaza.Contact" %>
+<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="TutorStudentAppNomzaza.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container mt-5">
         <!-- Contact Us Header -->
         <div class="text-center mb-4">
             <h2>Contact Us</h2>
+            <hr />
         </div>
 
         <div class="row">
@@ -12,32 +13,40 @@
             <div class="col-md-6">
                 <div class="card p-4 shadow">
                     <h4 class="mb-3">Send Us a Message</h4>
+                    <br />
                     <div class="form-group">
-                    <asp:TextBox ID="txtName" runat="server" CssClass="form-control mb-5" placeholder="Your Name"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control mb-5" placeholder="Your Email"></asp:TextBox>
-                        </div>
-                            <div class="form-group">
-                    <asp:TextBox ID="txtSubject" runat="server" CssClass="form-control mb-5" placeholder="Subject"></asp:TextBox>
-                            </div>
-                                <div class="form-group">
-                    <asp:TextBox ID="txtMessage" runat="server" CssClass="form-control mb-5" TextMode="MultiLine" Rows="4" placeholder="Your Message"></asp:TextBox>
-                                </div>
-                    <div class="text-left">
-                    <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-primary w-100" Text="Send Message" />
-                </div>
+                        <asp:TextBox ID="txtName" runat="server" CssClass="form-control mb-5" placeholder="Your Name"></asp:TextBox>
                     </div>
+                    <div class="form-group">
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control mb-5" placeholder="Your Email"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:TextBox ID="txtSubject" runat="server" CssClass="form-control mb-5" placeholder="Subject"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:TextBox ID="txtMessage" runat="server" CssClass="form-control mb-5" TextMode="MultiLine" Rows="4" placeholder="Your Message"></asp:TextBox>
+                    </div>
+                    <div class="text-left">
+                        <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-primary w-100" Text="Send Message" />
+                    </div>
+                </div>
             </div>
 
             <!-- Contact Details -->
             <div class="col-md-6">
                 <div class="card p-4 shadow">
                     <h4 class="mb-3">Get in Touch</h4>
-                    <p><strong>Address:</strong> Uitenhage, South Africa</p>
-                    <p><strong>Phone:</strong> +27 62 456 7890</p>
-                    <p><strong>Email:</strong> contact@qurious.com</p>
-
+                    <br />
+                    <h5>Primary Contact</h5>
+                    <p><strong>Address:</strong> 35 Tyhume Street, Kwa-Nobuhle, Kariega</p>
+                    <p><strong>Phone:</strong> +27 73 074 8229</p>
+                    <p><strong>Email:</strong> info@quriousquest.co.za</p>
+                    <br />
+                    <h5>Secondary Contact</h5>
+<p><strong>Address:</strong> Crn Drostdy Road &, Algoa Rd, Kariega, 6230</p>
+<p><strong>Phone:</strong> +27 73 074 8229</p>
+<p><strong>Email:</strong> info@quriousquest.co.za</p>
+<br />
                     <!-- Google Map Embed -->
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item"
