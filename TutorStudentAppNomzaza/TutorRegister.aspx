@@ -1,10 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="TutorRegister.aspx.cs" Inherits="TutorStudentAppNomzaza.TutorRegister" %>
+<%@ Page Title="Tutors" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="TutorRegister.aspx.cs" Inherits="TutorStudentAppNomzaza.TutorRegister" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel runat="server" Visible="false" ID="pnlSubAdd">
     <div class="container">
-        <h2 class="text-center">Tutor Registration</h2>
+        <br />
+        <h2>Tutor Registration</h2>
+        <br />
         <asp:Label ID="lblMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
         <div class="form-group">
             <label for="txtFirstName">First Name:</label>
@@ -34,7 +36,8 @@
             <asp:Label ID="lblSuccess" runat="server" ForeColor="Green"></asp:Label>
             <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
         </div>
-        <div class="text-center">
+        <br />
+        <div>
             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" CssClass="btn btn-primary" />
         </div>
     </div>
@@ -45,12 +48,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         </asp:Panel>
     <asp:Panel runat="server" Visible="true" ID="pnlSubDis">
-        <div class="text-center">
-            <asp:Button ID="btnNewTutor" runat="server" OnClick="btnNewTutor_Click" Text="New Tutor" CssClass="btn btn-primary" />
-        </div>
+        
         <div class="container">
             <div class="form-group col-xs-12 grid-container">
                 <div style="border-radius: 0px;" class="panel-heading">
+                    <br />
                     <h3>Manage Tutors</h3>
                 </div>
                 <div class="row">
@@ -71,6 +73,11 @@
 
                 </div>
             </div>
+
+            <div>
+                <br />
+    <asp:Button ID="btnNewTutor" runat="server" OnClick="btnNewTutor_Click" Text="New Tutor" CssClass="btn btn-primary" />
+</div>
         </div>
 
         <script src="js/jquery-1.12.0.min.js"></script>
