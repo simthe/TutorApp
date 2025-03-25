@@ -1,7 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentRegistration.aspx.cs" Inherits="TutorStudentAppNomzaza.StudentRegistration" %>
+<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentRegistration.aspx.cs" Inherits="TutorStudentAppNomzaza.StudentRegistration" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
-        <h2 class="text-center">Student Registration</h2>
+        <h2>Student Registration</h2>
+        <hr />
+        <br />
         <asp:Label ID="lblMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
         <div class="form-group">
             <label for="txtFirstName">First Name:</label>
@@ -39,7 +41,9 @@
             <asp:Label ID="lblSuccess" runat="server" ForeColor="Green" Visible="true"></asp:Label>
             <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="true"></asp:Label>
         </div>
-        <div class="text-center">
+        <br />
+        <br />
+        <div>
             <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" CssClass="btn btn-primary" />
         </div>
     </div>
