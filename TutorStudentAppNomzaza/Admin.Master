@@ -6,6 +6,7 @@
 <head runat="server">
     <title><%: Page.Title %> - Qurious Quest Tutors</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
