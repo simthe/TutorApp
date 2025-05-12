@@ -5,6 +5,7 @@
     <asp:Panel runat="server" Visible="false" ID="pnlSubAdd">
     <div class="container">
         <br />
+        <div class="card p-4 shadow">
         <h2>Admin Registration</h2>
         <br />
         <asp:Label ID="lblMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
@@ -33,6 +34,7 @@
             <asp:Button ID="btnRegister" OnClick="btnRegister_Click" runat="server" Text="Register" CssClass="btn btn-primary" />
         </div>
     </div>
+        </div>
 
     <!-- Bootstrap JS and dependencies (optional, for interactive components) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -43,6 +45,7 @@
         
         <div class="container">
             <div class="form-group col-xs-12 grid-container">
+                <br />
                 <div style="border-radius: 0px;" class="panel-heading">
                     <h3>Manage Admins</h3>
                 </div>
