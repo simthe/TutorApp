@@ -1,6 +1,7 @@
 <%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentRegistration.aspx.cs" Inherits="TutorStudentAppNomzaza.StudentRegistration" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
+        <div class="card p-4 shadow">
         <h2>Student Registration</h2>
         <hr />
         <br />
@@ -47,6 +48,7 @@
             <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" CssClass="btn btn-primary" />
         </div>
     </div>
+        </div>
 
     <!-- Bootstrap JS and dependencies (optional, for interactive components) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
