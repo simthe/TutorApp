@@ -1,6 +1,7 @@
 <%@ Page Title="Log In" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="TutorStudentAppNomzaza.SignIn" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
+        <div class="card p-4 shadow">
         <h2>User Login</h2>
         <hr />
         <br />
@@ -10,7 +11,7 @@
             <label for="txtEmail">Email:</label>
             <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" CssClass="form-control" required="required"></asp:TextBox>
         </div>
-
+        <br />
         <div class="form-group">
             <label for="txtPassword">Password:</label>
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" required="required"></asp:TextBox>
@@ -26,7 +27,7 @@
             <span>Don't have an account? <a href="~/StudentRegistration" runat="server">Register</a></span>
         </div>
     </div>
-
+        </div>
     <!-- Bootstrap JS and dependencies (optional, for interactive components) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
