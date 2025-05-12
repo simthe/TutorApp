@@ -6,6 +6,7 @@
     <asp:Panel runat="server" Visible="false" ID="pnlSubAdd">
         <div class="container">
             <br />
+            <div class="card p-4 shadow">
             <h2>Session Management</h2>
             <br />
             <asp:Label ID="lblTutor" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
@@ -38,6 +39,7 @@
                 <asp:Button ID="txtSave" runat="server" OnClick="txtSave_Click" Text="Save Session" CssClass="btn btn-primary" />
             </div>
         </div>
+            </div>
 
         <!-- Bootstrap JS and dependencies (optional, for interactive components) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
